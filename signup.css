@@ -1,0 +1,46 @@
+.signup_box{
+    margin-top: 200px;
+    margin-left: 40%;
+    text-align: center;
+    width: 300px;
+    height: 480px;
+
+}
+
+body {
+    background-color:whitesmoke;
+}
+
+#sign_up {
+    font-family:'Courier New', Courier, monospace ;
+    font-size:45px;
+}
+
+#id_box {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+#password_box {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+#name_box {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+#email_box {
+    width: 200px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+#create {
+    width: 205px;
+    height: 40px;
+}
