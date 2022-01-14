@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업다운게임</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        .contWrap{
+            position: relative;
+            width: 400px;
+            background-color: antiquewhite;
+            padding: 20px;
+            top : 40%;
+            left : 50%;
+            text-align: center;
+            transform: translate(-50%, -50%); 
+        }
+
+        input {
+            padding: 10px 20px;
+            font-size: 20px;
+            text-align: center;
+            max-width: 170px;
+        }
+
+        button {
+            font-size : 20px;
+            padding: 8px 20px;
+            text-align: center;
+        
+        }
+
+    </style>
+
+    <script>
+        // 코드를 작성하기전 웹브라우저에서 HTML과 CSS를 확인해보세요! 그러면 코드 작성에 더욱 도움이 될거 같아요!
+
+        // HTML & CSS는 미리 완성 시켜 놨습니다. JS만 작성해서 실습을 완료하시면 됩니다!
+        // 사용된 HTML의 태그는 3가지입니다.
+        // <input class="UserInput"></input> 사용자가 예측한 숫자를 적는 곳입니다.
+        // <p class="result"></p> 시작시에 1부터 10사이, 게임 시작후 -> 업, 다운, 정답의 여부가 나오는 곳 입니다.
+        // <button class="startBtn"></button> 확인 버튼입니다. 여기에 클릭이벤트를 연결하시면 됩니다!
+
+        // 코드에는 정답은 없습니다. 자유롭게 입력하시고 코드를 개선시키고 싶으면 자유롭게 기능을 추가 및 개선시켜도 됩니다.(HTML, CSS, JS 모두 가능 !!)
+
+        // 생성된 랜덤숫자(난수)를 콘솔로그나 alert()에 표기시켜 주면 테스트하기 더 좋지 않을까요~?
+        // 배열을 이용하거나, 함수를 따로 정의해 재사용성을 고려해주면 더 좋을거 같네요!
+
+        window.onload = function(){ 
+            //여기서부터 소스코드를 작성해 주세요 !
+            let random_number=parseInt(Math.random()*100);
+            
+            alert(random_number);
+            
+            let input = document.querySelector(".hi");
+            let result = document.querySelector(".result");
+            let button = document.querySelector(".startBtn");
+            let count_num = document.querySelector(".count_num");
+
+            button.addEventListener("click", wow); 
+            button.addEventListener("click",button_click);
+
+            var count = 0;
+
+            if (count <= 5 ){
+
+                function wow(){
+                    let a = input.value;
+
+                    if (a == random_number) { 
+                        result.innerHTML = " 정답입니다!";
+                    }else if (a > random_number){
+                        result.innerHTML = " 다운!";
+                    }else{
+                        result.innerHTML = " 업!";
+                    }
+                }
+                
+            } else {
+                result.innerHTML = "game over"
+            }
+
+            
+
+            function button_click() {
+                count+=1 
+                count_num.innerHTML = count + "번"
+            }
+
+        }
+
+
+    </script>
+
+    
+</head>
+<body>
+    <div class="contWrap">
+        <h3>Choose number</h3>
+        <p class="result">1부터 100사이</p>
+        <input type="number" class="hi" value="0" max="99" min="0">
+        <button type="button" class="startBtn">확인</button>
+        <p class="count_num">0번</p>
+    </div>
+    
+</body>
+</html>

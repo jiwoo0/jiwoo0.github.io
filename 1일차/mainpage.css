@@ -1,0 +1,51 @@
+header {
+    border : 3px solid gray;
+    margin: 5px;
+    text-align: center;
+}
+
+nav {
+    border-style: solid;
+    border-width: 3px;
+    border-color: lightgrey;
+    margin: 6px;
+}
+
+section{
+    border:3px solid grey;
+    margin: 6px;
+    margin-bottom: 210px;
+    text-align: center;
+}
+
+footer {
+    border: 3px solid grey;
+    margin: 5px;
+    text-align: center;
+}
+
+#loginButton {
+    margin-left: 80%;
+    background: none;
+    border : 0px;
+}
+
+#signupButton {
+    background: none;
+    border : 0px;
+}
+
+#myinfo_nav {
+    background: none;
+    border : 0px;
+}
+
+#album_nav {
+    background: none;
+    border : 0px;
+}
+
+#updown_nav {
+    background: none;
+    border : 0px;
+}

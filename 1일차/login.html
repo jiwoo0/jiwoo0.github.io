@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginpage</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="shortcut icon" href="발바닥.ico">
+
+</head>
+<script>
+    function buttonClicked() {
+        const id_input = document.querySelector("#id_box").value;
+        const password_input = document.querySelector("#password_box").value;
+
+        if (id_input && password_input ){
+            alert("로그인 되었습니다.")
+                location.href="mainpage.html"
+        } else if (id_input &&! password_input){
+            alert("비밀번호를 입력하세요.")
+        } else {
+            alert("아이디를 입력하세요.")
+        }
+    }
+
+</script>
+<body>
+
+
+<div class="box_login">
+    <div class=box_login1 style="width:50%;">
+        <h1>login</h1>
+    </div>
+    <div class=box_login2>
+        <input id="id_box" type="text" placeholder="ID를 입력하세요"> <br>
+        <input id="password_box" type="password" placeholder="PW를 입력하세요"><br>
+        <button id="loginClick" onclick="buttonClicked()">로그인</button>
+        <p style="text-decoration: overline;">아직 회원이 아니시라면? <br>
+        <button onclick="location.href='signup.html'">회원가입</button>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

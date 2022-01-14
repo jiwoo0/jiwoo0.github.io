@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="shortcut icon" href="발바닥.ico">
+    
+</head>
+<script>
+    function buttonClicked() {
+        const id_input = document.querySelector("#id_box").value;
+        const password_input = document.querySelector("#password_box").value;
+        const name_input = document.querySelector("#name_box").value;
+        const email_input = document.querySelector("#email_box").value;
+
+        if (id_input && password_input && name_input && email_input){
+            alert("회원가입 되었습니다.")
+                location.href="mainpage.html"
+        } else if (id_input &&! password_input &&name_input&&email_input) {
+            alert("비밀번호를 입력하세요.")
+
+        } else if (id_input && password_input &&!name_input&&email_input) {
+            alert("이름을 입력하세요.")
+
+        } else if (id_input && password_input &&name_input&&!email_input) {
+            alert("이메일을 입력하세요.")
+
+        } else if (!id_input && password_input &&name_input&&email_input) {
+            alert("아이디를 입력하세요.")
+
+        }else {
+            alert("정보를 모두 입력하세요.")
+        }
+    }
+
+</script>
+<body>
+<div class=signup_box>
+    <h1 id="sign_up">sign up</h1>
+    <input id="id_box" type="text" placeholder="ID를 입력하세요"> <br>
+    <input id="password_box" type="password" placeholder="PW를 입력하세요"><br>
+    <input id="name_box" type="text" placeholder="이름을 입력하세요"> <br>
+    <input id="email_box" type="text" placeholder="이메일을 입력하세요"> <br>
+    <button id="create" onclick="buttonClicked()">생성하기</button>
+</div>
+</body>
+</html>
